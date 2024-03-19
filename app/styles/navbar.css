@@ -1,0 +1,46 @@
+.navbar{
+    width: 100vw;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background-color: white;
+
+    /* justify-content: space-around; */
+}
+
+.navbar img{
+    max-width: 12vw;
+    max-height: 12vw;
+
+    margin: 4vw 4vw 0 4vw;
+
+    z-index: 1;
+}
+
+.navbar li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 60vw;
+}
+
+.navbar ul{
+    margin: 0;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+
+    font-weight: 500;
+    font-size: large;
+}
+
+.navbar a:hover{
+    color: var(--tersicore-red);
+}

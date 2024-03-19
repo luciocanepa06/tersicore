@@ -1,0 +1,24 @@
+.footer{
+    width: 80vw;
+    height: 25vh;
+    margin: 0 10vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer div{
+    width: 20vw;
+}
+
+.footer a{
+    color: black;
+    text-decoration: underline;
+}
+
+.footer a:hover{
+    color: var(--tersicore-red);
+    cursor: pointer;
+}

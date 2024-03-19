@@ -1,0 +1,48 @@
+.text-pages{
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #efefef;
+}
+
+#chi-siamo{
+    background-image: url("https://imgix.cosmicjs.com/77401b00-e548-11ee-a01e-c56f185aea7b-bg-chi-siamo.jpg");
+}
+
+#direttore{
+    background-image: url("https://imgix.cosmicjs.com/3c4b74b0-e54b-11ee-a01e-c56f185aea7b-bg-direttore.jpg");
+}
+
+.bg-photo{
+    width: 100vw;
+    height: 90vh;
+
+    display: flex;
+    justify-content: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-photo h1{
+    margin: 0;
+    padding-top: 15vh;
+    color: white;
+    font-family: "Chancery";
+    font-size: 8vw;
+    font-weight: 200;
+}
+
+.text-content{
+    width: 80vw;
+
+    margin: 4vw 0;
+    padding: 2vw 4vw;
+    border-radius: 30px;
+
+    background-color: white;
+}
