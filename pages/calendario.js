@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from 'react'
 
 import "../app/globals.css"
@@ -8,18 +10,8 @@ import "../app/styles/calendario.css"
 
 import Navbar from "../app/components/navbar.js"
 import Footer from "../app/components/footer.js"
-import Event from "../app/components/event.js"
-import { getData } from "@/app/page";
 
-// async function Events(){
-//     const data = await getData()
-//     const events = await Array.from(data, d=>{
-//         return(
-//             <Event e={d} />
-//         )
-//     })
-//     return events
-// }
+import { getData } from "../app/components/fetching";
 
 export default function Calendario() {
     const [data, setData] = useState([])
@@ -34,20 +26,15 @@ export default function Calendario() {
     }, [])
     if(isLoading){
          return(
-            <p>Loading ...</p>
+            <div className="main">
+            <Navbar />
+            <div className="calendario">
+                <p>Loading...</p>
+            </div>
+        <Footer />
+        </div>
          ) 
     }else{
-        // console.log(data)
-
-    // let events = []
-    // data.map(ev => {
-    //     events.push(<Event e={ev} />)
-    // })
-    // // const events = Array.from(data, (e) => {
-    // //     <p>Hello</p>
-    // // })
-    // console.log(events)
-
     return (
         <div className="main">
         <Navbar />

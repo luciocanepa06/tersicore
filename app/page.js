@@ -5,33 +5,8 @@ import Navbar from "./components/navbar"
 import Footer from "./components/footer"
 import Event from "./components/event"
 
-import { createBucketClient } from '@cosmicjs/sdk';
-
-const cosmic = createBucketClient({
-  bucketSlug: 'tersicore-v2-tersicore',
-  readKey: 'XfrOLrgYlSBJNqtbOuf0jqjYQ5WRUZRtQGiEW2c6rpT5R95A7J',
-});
-
-export async function getData() {
-  const currentDate = new Date().toISOString().slice(0, 10)
-  const data = await cosmic.objects.find({
-    type: "appuntamenti",
-    'metadata.data':{
-      $gte: currentDate,
-    },
-  }).props(["id", "title", "metadata"]).sort('metadata.data')
- 
-  return data.objects
-}
-
 export default async function Home() {
-  const events = await getData()
-
-  let event = false
-  if(events.length > 0){
-    event = events[0]
-  }
-
+  
   return (
     <div className="main">
       <Navbar />
@@ -41,7 +16,7 @@ export default async function Home() {
         </div>
         <div className="next-event">
           <h4>Prossimo appuntamento</h4>
-          <Event e={event}/>
+          <Event />
         </div>
 
       <div className="cd">
