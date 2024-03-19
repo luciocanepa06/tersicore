@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Chancery';
+    src: url('../../public/assets/fonts/Blackchancery.TTF');
+}
+
 .text-pages{
     width: 100vw;
 
