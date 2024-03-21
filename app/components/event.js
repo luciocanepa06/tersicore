@@ -25,14 +25,14 @@ export default function Event(){
     )
   }else{
     if(datas != []){
-      let event = datas.metadata
-      let data = event.data.slice(8, 10) + " / " + event.data.slice(5, 7) + " / " + event.data.slice(0, 4)
+      let ev = datas.metadata
+      let data = ev.data.slice(8, 10) + " / " + ev.data.slice(5, 7) + " / " + ev.data.slice(0, 4)
       return(
           <>
-          <h2>{event.titolo}</h2>
-          <p>{event.luogo}</p>
-          <p>{data + " - " + event.ora}</p>
-          <p id="next-event-description"><i>{event.descrizione}</i></p>
+          <h2>{ev.titolo}</h2>
+          <p>{ev.luogo}</p>
+          <p>{data + " - " + ev.ora}</p>
+          <p id="next-event-description"><i>{ev.descrizione}</i></p>
           </>
       )
     }else{

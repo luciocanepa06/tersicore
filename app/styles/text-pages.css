@@ -2,52 +2,132 @@
     font-family: 'Chancery';
     src: url('../../public/assets/fonts/Blackchancery.TTF');
 }
+@media (width >= 1000px) {
 
-.text-pages{
-    width: 100vw;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .text-pages{
+        width: 100vw;
 
-    background-color: #efefef;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: #efefef;
+    }
+
+    #chi-siamo{
+        background-image: url("https://imgix.cosmicjs.com/77401b00-e548-11ee-a01e-c56f185aea7b-bg-chi-siamo.jpg");
+    }
+
+    #direttore{
+        background-image: url("https://imgix.cosmicjs.com/3c4b74b0-e54b-11ee-a01e-c56f185aea7b-bg-direttore.jpg");
+    }
+
+    .bg-photo{
+        width: 100vw;
+        height: 90vh;
+
+        display: flex;
+        justify-content: center;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .bg-photo h1{
+        margin: 0;
+        padding-top: 15vh;
+        color: white;
+        font-family: "Chancery";
+        font-size: 8vw;
+        font-weight: 200;
+    }
+
+    .text-content{
+        width: 80vw;
+
+        margin: 4vw 0;
+        padding: 2vw 4vw;
+        border-radius: 30px;
+
+        background-color: white;
+    }
 }
 
-#chi-siamo{
-    background-image: url("https://imgix.cosmicjs.com/77401b00-e548-11ee-a01e-c56f185aea7b-bg-chi-siamo.jpg");
+@media (550px <= width <= 1000px) {
+    .text-pages{
+        width: 100vw;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: #efefef;
+    }
+
+    #chi-siamo{
+        background-image: url("https://imgix.cosmicjs.com/77401b00-e548-11ee-a01e-c56f185aea7b-bg-chi-siamo.jpg");
+    }
+
+    #direttore{
+        background-image: url("https://imgix.cosmicjs.com/3c4b74b0-e54b-11ee-a01e-c56f185aea7b-bg-direttore.jpg");
+    }
+
+    .bg-photo{
+        width: 100vw;
+        min-height: 50vw;
+
+        display: flex;
+        justify-content: center;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .bg-photo h1{
+        margin: 0;
+        padding-top: 8vw;
+        color: white;
+        font-family: "Chancery";
+        font-size: 8vw;
+        font-weight: 200;
+    }
+
+    .text-content{
+        width: 80vw;
+
+        margin: 4vw 0;
+        padding: 2vw 4vw;
+        border-radius: 30px;
+
+        background-color: white;
+    }
 }
 
-#direttore{
-    background-image: url("https://imgix.cosmicjs.com/3c4b74b0-e54b-11ee-a01e-c56f185aea7b-bg-direttore.jpg");
-}
+@media (width <= 550px) {
+    .text-pages{
+        width: 100vw;
 
-.bg-photo{
-    width: 100vw;
-    height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    display: flex;
-    justify-content: center;
+        background-color: #efefef;
+    }
 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+    .bg-photo{
+        display: none;
+    }
 
-.bg-photo h1{
-    margin: 0;
-    padding-top: 15vh;
-    color: white;
-    font-family: "Chancery";
-    font-size: 8vw;
-    font-weight: 200;
-}
+    .text-content{
+        width: 90vw;
 
-.text-content{
-    width: 80vw;
+        margin: 15vw 0 8vw 0;
+        padding: 2vw 4vw;
+        border-radius: 30px;
 
-    margin: 4vw 0;
-    padding: 2vw 4vw;
-    border-radius: 30px;
-
-    background-color: white;
+        /* background-color: white; */
+    }
 }
