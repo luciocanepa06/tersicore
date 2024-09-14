@@ -14,6 +14,10 @@ export default function Event(){
             setDatas(data[0])
           }
           
+      }).catch(e => {
+        if(e.status != 404){
+          console.log(e)
+        }
       }).finally(() => {
           setLoading(false)
       })
@@ -24,7 +28,7 @@ export default function Event(){
       <p> Loading </p>
     )
   }else{
-    if(datas != []){
+    if(datas && datas.metadata != undefined){
       let ev = datas.metadata
       let data = ev.data.slice(8, 10) + " / " + ev.data.slice(5, 7) + " / " + ev.data.slice(0, 4)
       return(
